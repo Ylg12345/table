@@ -963,6 +963,26 @@ describe('Table.Basic', () => {
     expect(wrapper.find('tr').last().props()['data-row-key']).toEqual('light');
   });
 
+  it('component header cell should have `data-cell-index`', () => {
+    const wrapper = mount(
+      <Table
+        columns={[
+          { title: 'Name', dataIndex: 'name' },
+          { title: 'Age', dataIndex: 'age' },
+        ]}
+        components={{ header: { cell: props => <th {...props} /> } }}
+        data={[
+          { name: 'John Brown', age: 32 },
+          { name: 'Jim Green', age: 42 },
+        ]}
+      />,
+    );
+
+    const thLists = wrapper.find('table thead tr th');
+    expect(thLists.first().props()['data-cell-index']).toEqual(0);
+    expect(thLists.at(1).props()['data-cell-index']).toEqual(1);
+  });
+
   it('render with state change', () => {
     class Test extends React.Component {
       state = {

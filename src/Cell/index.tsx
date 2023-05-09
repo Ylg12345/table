@@ -52,6 +52,7 @@ export interface CellProps<RecordType extends DefaultRecordType> {
   rowType?: 'header' | 'body' | 'footer';
 
   isSticky?: boolean;
+  cellIndex?: number;
 }
 
 const getTitleFromCellRenderChildren = ({
@@ -114,6 +115,7 @@ function Cell<RecordType>(props: CellProps<RecordType>) {
     appendNode,
     additionalProps = {},
     isSticky,
+    cellIndex,
   } = props;
 
   const cellPrefixCls = `${prefixCls}-cell`;
@@ -249,6 +251,8 @@ function Cell<RecordType>(props: CellProps<RecordType>) {
       //Span
       colSpan={mergedColSpan !== 1 ? mergedColSpan : null}
       rowSpan={mergedRowSpan !== 1 ? mergedRowSpan : null}
+      // td serial number in tr
+      data-cell-index={cellIndex}
     >
       {appendNode}
       {mergedChildNode}

@@ -24,12 +24,14 @@ exports[`Table.Basic columns support JSX condition 1`] = `
             <tr>
               <th
                 class="rc-table-cell"
+                data-cell-index="0"
                 scope="col"
               >
                 title
               </th>
               <th
                 class="rc-table-cell"
+                data-cell-index="1"
                 scope="col"
               >
                 title3
@@ -101,6 +103,7 @@ exports[`Table.Basic custom components renders correctly 1`] = `
           >
             <th
               class="rc-table-cell"
+              data-cell-index="0"
               name="my-header-cell"
               scope="col"
             >
@@ -167,6 +170,7 @@ exports[`Table.Basic custom components renders fixed column and header correctly
           >
             <th
               class="rc-table-cell rc-table-cell-fix-left rc-table-cell-fix-left-last"
+              data-cell-index="0"
               name="my-header-cell"
               scope="col"
               style="position: sticky; left: 0px;"
@@ -175,6 +179,7 @@ exports[`Table.Basic custom components renders fixed column and header correctly
             </th>
             <th
               class="rc-table-cell"
+              data-cell-index="1"
               name="my-header-cell"
               scope="col"
             >
@@ -182,6 +187,7 @@ exports[`Table.Basic custom components renders fixed column and header correctly
             </th>
             <th
               class="rc-table-cell rc-table-cell-fix-right rc-table-cell-fix-right-first"
+              data-cell-index="2"
               name="my-header-cell"
               scope="col"
               style="position: sticky; right: 15px;"
@@ -190,6 +196,7 @@ exports[`Table.Basic custom components renders fixed column and header correctly
             </th>
             <th
               class="rc-table-cell rc-table-cell-fix-right rc-table-cell-scrollbar"
+              data-cell-index="3"
               name="my-header-cell"
               style="position: sticky; right: 0px;"
             />
@@ -307,12 +314,15 @@ exports[`Table.Basic custom components scroll content with scroll 1`] = `
           <tr>
             <td
               class="rc-table-cell"
+              data-cell-index="0"
             />
             <td
               class="rc-table-cell"
+              data-cell-index="1"
             />
             <td
               class="rc-table-cell rc-table-cell-scrollbar"
+              data-cell-index="2"
             />
           </tr>
         </thead>
@@ -345,18 +355,21 @@ exports[`Table.Basic internal api transformColumns basic 1`] = `
           <tr>
             <th
               class="rc-table-cell"
+              data-cell-index="0"
               scope="col"
             >
               before
             </th>
             <th
               class="rc-table-cell"
+              data-cell-index="1"
               scope="col"
             >
               Name
             </th>
             <th
               class="rc-table-cell"
+              data-cell-index="2"
               scope="col"
             >
               after
@@ -426,6 +439,7 @@ exports[`Table.Basic renders colSpan correctly 1`] = `
             <th
               class="rc-table-cell"
               colspan="2"
+              data-cell-index="0"
               scope="colgroup"
             >
               Name
@@ -488,6 +502,7 @@ exports[`Table.Basic renders correctly RTL 1`] = `
           <tr>
             <th
               class="test-prefix-cell"
+              data-cell-index="0"
               scope="col"
             >
               Name
@@ -544,6 +559,7 @@ exports[`Table.Basic renders correctly basic 1`] = `
           <tr>
             <th
               class="test-prefix-cell"
+              data-cell-index="0"
               scope="col"
             >
               Name
@@ -600,12 +616,14 @@ exports[`Table.Basic renders correctly column children undefined 1`] = `
           <tr>
             <th
               class="rc-table-cell"
+              data-cell-index="0"
               scope="col"
             >
               姓名
             </th>
             <th
               class="rc-table-cell"
+              data-cell-index="1"
               scope="col"
             >
               年龄
@@ -668,6 +686,7 @@ exports[`Table.Basic renders correctly falsy columns 1`] = `
           <tr>
             <th
               class="rc-table-cell"
+              data-cell-index="0"
               scope="col"
             >
               姓名
@@ -724,6 +743,7 @@ exports[`Table.Basic renders correctly no columns 1`] = `
           <tr>
             <td
               class="rc-table-cell"
+              data-cell-index="0"
             />
           </tr>
         </thead>
@@ -773,12 +793,14 @@ exports[`Table.Basic renders rowSpan correctly 1`] = `
           <tr>
             <th
               class="rc-table-cell"
+              data-cell-index="0"
               scope="col"
             >
               First Name
             </th>
             <th
               class="rc-table-cell"
+              data-cell-index="1"
               scope="col"
             >
               Last Name
@@ -849,12 +871,14 @@ exports[`Table.Basic should get scrollbar size 1`] = `
           <tr>
             <th
               class="rc-table-cell"
+              data-cell-index="0"
               scope="col"
             >
               Name
             </th>
             <td
               class="rc-table-cell rc-table-cell-scrollbar"
+              data-cell-index="1"
             />
           </tr>
         </thead>
@@ -884,6 +908,7 @@ exports[`Table.Basic syntactic sugar 1`] = `
           <tr>
             <th
               class="rc-table-cell"
+              data-cell-index="0"
               scope="col"
             >
               total
@@ -892,6 +917,7 @@ exports[`Table.Basic syntactic sugar 1`] = `
           <tr>
             <th
               class="rc-table-cell"
+              data-cell-index="0"
               scope="col"
             >
               Name
