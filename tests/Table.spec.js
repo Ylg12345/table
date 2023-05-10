@@ -978,9 +978,10 @@ describe('Table.Basic', () => {
       />,
     );
 
-    const thLists = wrapper.find('table thead tr th');
-    expect(thLists.first().props()['data-cell-index']).toEqual(0);
-    expect(thLists.at(1).props()['data-cell-index']).toEqual(1);
+    const ths = wrapper.find('table thead tr th');
+    ths.forEach((th, index) => {
+      expect(th.props()['data-cell-index']).toEqual(index);
+    });
   });
 
   it('render with state change', () => {
